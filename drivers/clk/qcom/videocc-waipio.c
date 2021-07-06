@@ -650,6 +650,7 @@ static struct platform_driver video_cc_waipio_driver = {
 		.of_match_table = video_cc_waipio_match_table,
 		.sync_state = video_cc_waipio_sync_state,
 		.pm = &video_cc_waipio_pm_ops,
+		.probe_type = PROBE_FORCE_SYNCHRONOUS,
 	},
 };
 
