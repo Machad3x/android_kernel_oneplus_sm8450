@@ -4109,6 +4109,7 @@ static struct platform_driver gcc_waipio_driver = {
 		.name = "gcc-waipio",
 		.of_match_table = gcc_waipio_match_table,
 		.sync_state = gcc_waipio_sync_state,
+		.probe_type = PROBE_FORCE_SYNCHRONOUS,
 	},
 };
 
