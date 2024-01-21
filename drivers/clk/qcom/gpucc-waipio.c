@@ -937,6 +937,7 @@ static struct platform_driver gpu_cc_waipio_driver = {
 		.name = "gpu_cc-waipio",
 		.of_match_table = gpu_cc_waipio_match_table,
 		.sync_state = gpu_cc_waipio_sync_state,
+		.probe_type = PROBE_FORCE_SYNCHRONOUS,
 	},
 };
 
