@@ -135,3 +135,12 @@ config OPLUS_FEATURE_KGSL_BUS_NOLIMIT
 	depends on QCOM_KGSL
 	help
 	  When enabled, oplus gpu vote bus freq based last vote value and without any limit in opp table.
+
+config QCOM_KGSL_HIBERNATION
+	bool "Enable Hibernation support in KGSL"
+	depends on QCOM_KGSL && HIBERNATION
+	help
+	  Say 'Y' to enable hibernation support in kgsl.
+	  If enabled, kgsl will register necessary power manager callbacks to
+	  support hibernation. Also, driver will handle secure memory during
+	  hibernation entry and exit.
